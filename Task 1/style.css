@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+
+.container {
+    max-width: auto;
+    text-align: center;
+}
+
+.header {
+    background-color: rgb(255, 32, 181);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.intro {
+    padding: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center;
+    height: 100h;
+}
+
+.team-member {
+    width: 48%;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.team-member img {
+    width: 100%;
+    height: auto;
+}
+
+.team-member p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.team-title-container {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 0;
+    margin-top: 2px;
+    padding: 5px;
+    background-color: #fd20d8;
+    justify-content: center;
+    color: white;
+    display: inline-block;
+    block-size: auto;
+    border-radius: 10px;
+}
+
+.separator {
+    border-top: 2px dashed #fd20d8;
+    margin: 20px 0;
+}
+.nav {
+    height: 50px;
+    width: 100%;
+    background-color: #fd20d8;
+    position: relative;
+  }
+  
+  .nav > .nav-header {
+    display: inline;
+  }
+  
+  .nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 10px 10px 10px;
+  }
+  
+  .nav > .nav-btn {
+    display: none;
+  }
+  
+  .nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+  }
+  
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
+  }
+  
+  .nav > .nav-links > a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .nav > #nav-check {
+    display: none;
+  }
+  
+  @media (max-width:600px) {
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #eee;
+    }
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #333;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+  }
+
+@media (min-width: 768px) {
+    .team-member {
+        width: 23%;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-member {
+        width: 100%;
+    }
+}
