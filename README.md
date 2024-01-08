@@ -1,1 +1,1 @@
-# Software Quality Assurance (SQA) Repository
+# VeriTech
